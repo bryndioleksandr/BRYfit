@@ -23,7 +23,7 @@ app.use(router);
 const startServer = async () => {
     try {
         await connectToDB();
-        const PORT = process.env.PORT || 5000;
+        const PORT = process.env.PORT || 5501;
         app.listen(PORT, () => {
             console.log(`Server is running at http://localhost:${PORT}`)
         })

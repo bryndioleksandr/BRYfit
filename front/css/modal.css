@@ -1,0 +1,117 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.modal-window {
+    width: 90%;
+    min-width: 350px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    top: 60px;
+    background: white;
+    border-radius: 5px;
+}
+
+.modal-header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(211, 211, 211);
+    caret-color: transparent;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    color: #2196F3;
+}
+.modal-close-btn {
+    width: 36px;
+    text-align: center;
+    font-weight: 200;
+    background-color: rgb(221, 221, 221);
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-close-btn:hover {
+    background-color: rgb(197, 197, 197);
+    border: 1px solid rgb(160, 160, 160);
+}
+
+.modal-content {
+    padding: 10px 10px;
+}
+
+.modal-footer {
+    display: flex;
+    width: 100%;
+}
+
+.modal-form-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px 0px;
+}
+
+.confirmation-footer{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    padding: 0 30px 10px
+}
+
+.confirmation-message {
+    width: 100%;
+    color: red;
+    text-align: center;
+}
+
+.login-footer {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.login-footer > div {
+    padding: 0 5px 5px;
+}
+
+
+.modal-overlay.modal-open {
+    display: block;
+}
+
+.modal-overlay.modal-close {
+    display: none;
+}
+
+.switch-link{
+    cursor: pointer;
+    color: #2196F3;
+}
+
+.touppercase{
+    text-transform: uppercase;
+}
+
+.form-image {
+    padding-right: 30px;
+}

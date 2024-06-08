@@ -1,0 +1,58 @@
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #b5ffcf;
+    color: black;
+    font-weight: bolder;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    opacity: 0;
+    animation: fade-in 0.3s ease-in-out forwards;
+    caret-color: transparent;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  
+  .popup p {
+    margin: 0;
+  }
+
+.popup-close-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.popup-close-message div {
+    text-align: center;
+}
+
+  
+  .popup-close-btn{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: 1rem;
+    font-weight: normal;
+    background-color: #ccc;
+    padding: 0 5px;
+    cursor: pointer;
+
+  }

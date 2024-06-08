@@ -16,6 +16,8 @@ cloudinary.config({
 const saveDataToDB = async (productId, data, res) => {
     // Перевіряємо чи строрювати новий рекорд в БД, чи оновити наявний
     if (productId == "") {                  //Створюємо новий рекорд БД
+        console.log(`Save data to db:\n${data}`);
+        
             await Product.create(data)
                     .then( () => res.sendStatus(200))
                     .catch(error => {
@@ -48,23 +50,27 @@ export const createAndEditProduct = async (req, res) => {
                 // formidable повертає значень полів форми у вигляді масиву
                 // перетворюємо їх у string
                 for (const key in fields) {
+                    console.log("take a look here");
+                    console.log(`${key}: ${fields[key]}`);
                     if (Array.isArray(fields[key])) {
                         fields[key] = fields[key].join(', ');
                     }
                   }
                                
-                const { productId, producCategory, productName, productVolume, productMaterial, productPrice, oldCloudinaryPublicId, oldImagePath } = fields;
+                const { productId, producCategory, productName, productSizes, productProducer, productPrice, oldCloudinaryPublicId, oldImagePath } = fields;
                 const { productImage: [{ filepath }] } = files;
                 const { productImage: [{ originalFilename }] } = files;
-                
+                console.log('fields are ' + fields + "\n");
+                console.log(producCategory, productName, productSizes, productProducer);
                 // Починаємо формувати об'єкт для запису в БД
                 const productData = {
                     category: producCategory,
                     name: productName,        
-                    volume: productVolume,
-                    material:productMaterial,
+                    sizes: productSizes,
+                    producer:productProducer,
                     price:productPrice
                 };
+                
                                   
                 // Перевіряємо чи проводилася зміна картинки на клієнті
                 if (!originalFilename) {
@@ -130,10 +136,10 @@ export const getAllProducts = async (req, res) => {
             sortObj.price = -1;
             break;
         case req.query.sort === 'incVl' :
-            sortObj.volume = 1;
+            sortObj.sizes = 1;
             break;
         case req.query.sort === 'decVl' :
-            sortObj.volume = -1;
+            sortObj.sizes = -1;
             break;
         case req.query.sort === 'nf' :
             sortObj._id = -1;
@@ -156,7 +162,7 @@ export const getAllProducts = async (req, res) => {
     if (req.query.search) {
         filterObj.$or = [
             { name:  { $regex: new RegExp(req.query.search, "i") } },
-            { material: { $regex: new RegExp(req.query.search, "i") } }
+            { producer: { $regex: new RegExp(req.query.search, "i") } }
           ]
     };
     

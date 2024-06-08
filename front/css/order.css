@@ -1,0 +1,139 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    width: 96vw;
+    position: relative;
+
+}
+
+.order-card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6db5f8;
+    padding: 10px;
+    margin-top: 60px;
+    border-radius: 5px;
+}
+
+.order-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.order-resep-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 10px 10px;
+    caret-color: transparent;
+}
+
+.order-resep-info-item {
+    line-height: 1.1rem;
+    font-size: 0.9rem;
+    max-width: 270px;
+    margin: 7px 10px;
+
+}
+
+.order-id-parent{
+    position: relative;
+}
+
+.order-id {
+    border: 1px solid #6db5f8;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    position: absolute;
+    top: -1.5rem; 
+    left: 10px;
+    font-size: 0.75rem;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.order-id-item{
+    line-height: 1rem;
+    text-align: center;
+    color: cornflowerblue;
+    margin: 0 10px;
+    
+}
+.order-status-text{
+    background-color: white;
+    border: 1px solid grey;
+    display: inline-block;
+    margin: 2px 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.order-status-manage-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    line-height: 1.1rem;
+    font-size: 0.9rem;
+    margin: 10px 10px 0;
+}
+
+.order-status-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.order-status-select-item-label{
+    width: 130px;
+}
+
+.order-status-select-item-select{
+    width: 135px;
+}
+
+.order-status-select-item-btm{
+    width: 70px;
+    margin-left: 10px;
+}
+
+.order-cart-container{
+    display: flex;
+    flex-direction: column;
+    caret-color: transparent;
+}
+
+.order-cart-card {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(205, 205, 207, 0.75);
+    border-radius: 5px;
+}
+
+.order-details{
+    margin-left: 30px;
+}
+
+/* Перевизначаємо параметри bootstrap */
+.accordion-button {
+    padding: 0.2rem 1rem;
+}

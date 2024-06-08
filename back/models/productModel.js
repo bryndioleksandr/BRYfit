@@ -7,19 +7,19 @@ const productSchema = new mongoose.Schema({
         ref: 'Category',
         required: true
     },
+    producer: {
+        type: String,
+        required: true,
+        trim: true
+    },
     name: {
         type: String,
         required: true,
         trim: true
     },
-    volume: {
-        type:Number,
-        required: true,
-        trim: true
-    },
-    material: {
-        type: String,
-        required: true,
+    sizes:{
+        type: [String],
+        required: true
     },
     price: {
         type: Number,

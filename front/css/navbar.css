@@ -1,0 +1,160 @@
+.navbar-container {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex; 
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(108, 117, 125);
+    color: white;
+    caret-color: transparent;
+}
+
+.navbar-menu-container {
+    caret-color: transparent;
+}
+
+.navbar{
+    position: absolute; 
+    right: 10px;
+} 
+
+.navbar-bg-body {
+    background-color: rgba(108, 117, 125, 0.8);
+}
+
+/* Перевизначення параметрів bootstrap */
+.navbar-light .navbar-toggler {
+    color: #f9fafb;
+    border-color: #f9fafb;
+}
+
+.navbar-light .navbar-toggler {
+    color: #f9fafb;
+    border-color: #f9fafb;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #f9fafb;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    justify-content: flex-end;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #ffc155;
+}
+
+.navbar-nav {
+    align-items: flex-end;
+}
+
+
+.site-name {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-size: 2rem;
+    margin: 0;
+    padding: 5px;
+    position: absolute;
+    left: 0;
+}
+
+.site-name-item{
+    padding-right: 5px;
+}
+.shop-name{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin: 0 30px;
+}
+
+
+.nav-item {
+    display: flex;
+}
+
+.nav-item.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.dropdown-item {
+    text-align: right;
+}
+
+.dropdown-item:hover {
+    color: #f9a921;
+    background-color: transparent;
+}
+
+.fa-user{
+    font-size: 1.4rem;
+}
+
+.fa-user:before {
+    padding-right: 10px;
+}
+
+.dropdown-menu[data-bs-popper] {
+    left: unset;
+}
+
+.user-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-top: 0;
+    display: inline-block;
+}
+
+.navbar-cart-icon {
+    position: relative;
+    font-size: 30px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.navbar-cart-icon:hover {
+    color: #f9a921;
+}
+
+.navbar-cart-icon-count {
+    display: none;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 12px;
+}
