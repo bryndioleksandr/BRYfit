@@ -5,16 +5,13 @@ import Product from "../models/productModel.js";
 export const createCategory = async (req, res) => {
     try {
         const { categoryName } = req.body;
-        // Для перевірки унікальност категорії робимо її slug
         const categorySlug = slugify(categoryName, {
-            lower: true,  // Перетворити рядок на нижній регістр
-            strict: true  // Видалити спеціальні символи
+            lower: true,  
+            strict: true 
             })
-        // Перевіряємо по slug чи існує вже така категорія товарів
         const catExists = await Category.exists( {slug: categorySlug} );
         if (catExists) return res.status(400).json({msg: "This category already exists"})   
         
-        // Якщо не існує - створюємо новий рекорд в БД
         const newCategory = new Category( {
             name: categoryName,
             slug: categorySlug
