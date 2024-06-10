@@ -1,17 +1,45 @@
-.navbar-container {
-    z-index: 100;
-    position: fixed;
+@import url('https://fonts.cdnfonts.com/css/do-futuristic');
+
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #ccc;
+  }
+  
+  .progress-bar {
+    height: 5px;
+    background: #02301f;
+    width: 0%;
+  }
+
+.before-nav {
+    background-color: black;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
     top: 0;
     left: 0;
     right: 0;
-    display: flex; 
+    height: 100px;
+    position: fixed;
+    z-index: 100;
+    border-bottom:2px solid black;
+}
+
+.navbar-container {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
     align-items: flex-start;
     flex-wrap: wrap;
     width: 100vw;
-    height: 60px;
-    background-color: rgb(108, 117, 125);
-    color: white;
+    height: 70px;
+    background-color: white;
+    color: black;
     caret-color: transparent;
 }
 
@@ -19,31 +47,36 @@
     caret-color: transparent;
 }
 
-.navbar{
-    position: absolute; 
+.navbar {
+    position: absolute;
     right: 10px;
-} 
+}
 
 .navbar-bg-body {
-    background-color: rgba(108, 117, 125, 0.8);
-}
-
-/* Перевизначення параметрів bootstrap */
-.navbar-light .navbar-toggler {
-    color: #f9fafb;
-    border-color: #f9fafb;
+    background-color: white;
 }
 
 .navbar-light .navbar-toggler {
-    color: #f9fafb;
-    border-color: #f9fafb;
+    color: black;
+    border-color: black;
+}
+
+.navbar-light .navbar-toggler {
+    color: black;
+    border-color: black;
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #f9fafb;
+    color: black;
 }
 
-.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+.navbar>.container,
+.navbar>.container-fluid,
+.navbar>.container-lg,
+.navbar>.container-md,
+.navbar>.container-sm,
+.navbar>.container-xl,
+.navbar>.container-xxl {
     justify-content: flex-end;
 }
 
@@ -55,7 +88,8 @@
     align-items: center;
 }
 
-.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
     color: #ffc155;
 }
 
@@ -72,20 +106,30 @@
     flex-direction: row;
     font-size: 2rem;
     margin: 0;
-    padding: 5px;
+    padding-top:5px;
+    margin-left: 10px;
     position: absolute;
     left: 0;
 }
 
-.site-name-item{
-    padding-right: 5px;
-}
-.shop-name{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
+.site-name-item:hover{
+    background-color: #02301F;
+
 }
 
-.menu{
+.site-name-item {
+    color: white;
+    background-color: rgba(0, 0, 0, 1);
+    transition-duration: 0.3s;
+    padding: 5px 20px 5px 20px;
+}
+
+.shop-name {
+    font-family: 'DO Futuristic', sans-serif;
+    font-weight: 600;
+}
+
+.menu {
     display: flex;
     flex-direction: row;
     color: white;
@@ -97,7 +141,7 @@
     display: flex;
 }
 
-.nav-item.dropdown{
+.nav-item.dropdown {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -112,7 +156,7 @@
     background-color: transparent;
 }
 
-.fa-user{
+.fa-user {
     font-size: 1.4rem;
 }
 
@@ -122,12 +166,15 @@
 
 .dropdown-menu[data-bs-popper] {
     left: unset;
+    overflow: hidden;
+    position: absolute;
+    z-index: 15000;
 }
 
 .user-name {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: uppercase;
     padding-top: 0;
     display: inline-block;
@@ -152,7 +199,7 @@
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: red;
+    background-color: rgba(248, 7, 7, 1);
     color: white;
     border-radius: 50%;
     padding: 4px;

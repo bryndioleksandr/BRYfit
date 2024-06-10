@@ -95,6 +95,7 @@ export const editProduct = (product) => {
     document.getElementById('productSizes').value = product.sizes;
     document.getElementById('productProducer').value = product.producer;
     document.getElementById('productPrice').value = product.price;
+    document.getElementById('productColor').value = product.color;
     document.getElementById('formImage').setAttribute("src", product.image) ;
     document.getElementById('oldCloudinaryPublicId').value = product.cloud;
     document.getElementById('oldImagePath').value = product.image;

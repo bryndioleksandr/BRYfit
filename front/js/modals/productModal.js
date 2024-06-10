@@ -23,14 +23,18 @@ const productModalContent = `<form name="productForm" enctype="multipart/form-da
             <td class="form-input"><input type="text" name="productName" id="productName" class="form-control" required></td>
         </tr>
         <tr>
-            <td class="form-label"><label for="productSizes">Sizes:</label> </td>
-            <td class="form-input"><input type="text" name="productSizes" id="productSizes" class="form-control" required></td>
+        <td class="form-label"><label for="productProducer">Producer:</label> </td>
+        <td class="form-input">
+            <input type="text" name="productProducer" id="productProducer" class="form-control" required>
+        </td>
         </tr>
         <tr>
-            <td class="form-label"><label for="productProducer">Producer:</label> </td>
-            <td class="form-input">
-                <input type="text" name="productProducer" id="productProducer" class="form-control" required>
-            </td>
+        <td class="form-label"><label for="productSizes">Sizes:</label> </td>
+        <td class="form-input"><input type="text" name="productSizes" id="productSizes" class="form-control" required placeholder="length x width x height"></td>
+        </tr>
+        <tr>
+        <td class="form-label"><label for="productColor">Color:</label> </td>
+        <td class="form-input"><input type="text" name="productColor" id="productColor" class="form-control"></td>
         </tr>
         <tr>
             <td></td>
@@ -52,13 +56,13 @@ const productModalContent = `<form name="productForm" enctype="multipart/form-da
         <input type="reset" class="btn btn-danger" id="cancelProductBtn" data-close="true" value="Cancel">
     </div>
     </form>`;
-const productModalFooter =``;
+const productModalFooter = ``;
 export const productModal = new CustomModal('prd', productModalTitle, productModalContent, productModalFooter);
 productModal.create();
 
 export const convertModalToCreate = () => {
     document.getElementById('title-prd').innerText = "Create product";
-    document.getElementById('submitProductBtn').value = "Create" 
+    document.getElementById('submitProductBtn').value = "Create"
 }
 
 
@@ -67,7 +71,7 @@ export const convertModalToCreate = () => {
 
 export const convertModalToEdit = () => {
     document.getElementById('title-prd').innerText = "Edit product";
-    document.getElementById('submitProductBtn').value = "Confirm" 
+    document.getElementById('submitProductBtn').value = "Confirm"
 }
 
 
@@ -79,21 +83,21 @@ export const openProductModalWithCreate = () => {
 }
 
 // Обробник відправки форми
-document.forms["productForm"].addEventListener ('submit', (e) => {
+document.forms["productForm"].addEventListener('submit', (e) => {
     e.preventDefault();
     productModal.close();
     convertModalToCreate();
     sendProductData()
-    .then( () => {getAndShowAllProducts()} )
-    .catch (err => console.error(err)) ;    
+        .then(() => { getAndShowAllProducts() })
+        .catch(err => console.error(err));
 })
 
 
 // Випадаючий список для категорій товарів в модалці продуктів
 // тобто дані блоки перемальовуються при створенні нової категорії
 
-export const renderProductCategoriesOptions = () =>  {
-    
+export const renderProductCategoriesOptions = () => {
+
     // Вибираємо select модалкки продуктів i очищуємо його
     const producCategory = document.getElementById('producCategory');
     // console.log('producCategory', producCategory);
@@ -106,10 +110,10 @@ export const renderProductCategoriesOptions = () =>  {
     defaultProductCategoryOption.setAttribute("value", "");
     defaultProductCategoryOption.innerText = ` -- select a category -- `;
     producCategory.appendChild(defaultProductCategoryOption);
-    
+
     // Вибираємо категорії товарів з LS
     const categoryArr = getCategories();
-    
+
     categoryArr.forEach(category => {
         const categoryOption = document.createElement('option');
         categoryOption.value = category._id;

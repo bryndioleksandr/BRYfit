@@ -3,17 +3,19 @@ import { getAndShowAllProducts } from "./productAPI/products.js";
 
 export const renderFiltration = () => {
     const filterContainer = document.querySelector('.filter-container');
-    filterContainer.innerHTML  =`<form class="filter-form">
+    filterContainer.innerHTML = `<form class="filter-form">
                 <div class="filter-category">
                     <select class="form-select" id="filter-category" >
                     </select>
                 </div>
-                <div class="filter-search">
-                    <input class="form-control" id="filter-search" type="text" placeholder="-- search product --" >
-                </div>
+                <div class="filter-search" style="position: relative;">
+    <input class="form-control" id="filter-search" type="text" placeholder="Search product" style="padding-left: 30px;">
+    <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%);"></i>
+</div>
+
                 <div class="filter-sort">
                     <select class="form-select" id="filter-sort">
-                        <option selected value="nosort">-- sort products (Don't sort) --</option>
+                        <option selected value="nosort">Don't sort</option>
                         <option value="incPr">by increasing price</option>
                         <option value="decPr">by decreasing price</option>
                         <option value="incVl">by increasing size</option>
@@ -32,7 +34,7 @@ export const renderFiltration = () => {
     attachEventHandler('filter-search', 'input', filtration);
 }
 
-export const  renderFilterCategoriesOptions = (categories) => {
+export const renderFilterCategoriesOptions = (categories) => {
     // Вибираємо відповідний select з блоку фільтрації i очищуємо його
     const filterCategory = document.getElementById('filter-category');
     filterCategory.innerHTML = ``;
@@ -42,15 +44,15 @@ export const  renderFilterCategoriesOptions = (categories) => {
     // defaultProductCategoryOption.setAttribute("disabled", "");
     defaultProductCategoryOption.setAttribute("selected", "");
     defaultProductCategoryOption.setAttribute("value", "all");
-    defaultProductCategoryOption.innerText = ` -- select a category (All categories) -- `;
+    defaultProductCategoryOption.innerText = `All categories`;
     filterCategory.appendChild(defaultProductCategoryOption);
     // Вибираємо категорії товарів з LS
     // const categoryArr = getCategories();
     categories.forEach(category => {
-                const categoryOption = document.createElement('option');
-                categoryOption.value = category._id;
-                categoryOption.innerText = `${category.name}`;
-                filterCategory.appendChild(categoryOption);
+        const categoryOption = document.createElement('option');
+        categoryOption.value = category._id;
+        categoryOption.innerText = `${category.name}`;
+        filterCategory.appendChild(categoryOption);
     });
 }
 

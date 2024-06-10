@@ -1,9 +1,10 @@
 .filter-container {
     position: relative;
-    z-index: 5;
-    top: 60px;
+    top: 95px;
     width: 100%;
+    background-color: white;
 }
+
 
 .filter-form{
     position: relative;
@@ -15,9 +16,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    background-color: #cfcfcf;
+    background-color: white;
     margin: 0;
     padding: 4px 2px;
+    margin-top:15px;
+
 }
 
 .filter-category{
@@ -36,4 +39,9 @@
     flex: 1 1 auto;
     margin: 1px 2px;
     max-width: 100%;
+}
+
+select{
+    cursor:pointer;
+    border:2px solid red;
 }

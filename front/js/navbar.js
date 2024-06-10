@@ -13,7 +13,6 @@ export const navbarRender = (user) => {
     navbarContainer.innerHTML = `
         <div class="site-name" id="navbarSiteName">
             <div class="shop-name site-name-item">BRYfit</div>
-            <div class="fa fa-mug-hot site-name-item"></div>
         </div>
         <div class="navbar-menu-container">
         </div>`;

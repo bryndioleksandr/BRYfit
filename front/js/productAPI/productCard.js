@@ -19,8 +19,9 @@ export const productCardRender = (product) => {
                                         <div><img src="${product.image}" class="product-img"></div>
                                         <div class="product-category"><div class="product-category-text">${category.name}</div></div>
                                         <div class="product-name">${product.name}</div>
-                                        <div class="product-text">Sizes: <span class="product-volume">${product.sizes}</span> mm</div> 
+                                        <div class="product-text">Color: <span class="product-color">${product.color}</span></div>
                                         <div class="product-text">Producer: <span class="product-material">${product.producer}</span></div>
+                                        <div class="product-text">Sizes: <span class="product-volume">${product.sizes}</span> mm</div> 
                                             
                                     </div>`;
     const adminProductCardFooter = `  <div class="product-footer">

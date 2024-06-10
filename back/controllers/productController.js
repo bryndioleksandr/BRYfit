@@ -57,7 +57,7 @@ export const createAndEditProduct = async (req, res) => {
                     }
                   }
                                
-                const { productId, producCategory, productName, productSizes, productProducer, productPrice, oldCloudinaryPublicId, oldImagePath } = fields;
+                const { productId, producCategory, productName, productSizes, productProducer, productPrice, productColor, oldCloudinaryPublicId, oldImagePath } = fields;
                 const { productImage: [{ filepath }] } = files;
                 const { productImage: [{ originalFilename }] } = files;
                 console.log('fields are ' + fields + "\n");
@@ -68,7 +68,8 @@ export const createAndEditProduct = async (req, res) => {
                     name: productName,        
                     sizes: productSizes,
                     producer:productProducer,
-                    price:productPrice
+                    price:productPrice,
+                    color: productColor
                 };
                 
                                   
