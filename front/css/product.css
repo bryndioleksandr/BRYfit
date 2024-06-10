@@ -34,11 +34,11 @@
 .product-category{
     background-color: white;
     border-radius: 3px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: black;
     width: 60%;
     position: absolute;
-    top: 45px;
+    top: 10px;
     left: -10px;
     transform: skewX(-20deg);
     
@@ -55,6 +55,7 @@
 }
 
 .product-text{
+    display:none;
     font-size: 0.9em;
 }
 

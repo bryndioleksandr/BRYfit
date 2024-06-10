@@ -13,6 +13,17 @@ export const productCardRender = (product) => {
     // Функціонал для формування карточки продукту
     const productCard = document.createElement("div");
     productCard.classList.add("product");
+    const addInfo = document.getElementsByClassName('product-text');
+    productCard.addEventListener('mouseenter', ()=>{
+        for(let i =0; i<addInfo.length;i++){
+            addInfo[i].style = "display:block";
+        }
+    })
+    productCard.addEventListener('mouseleave', ()=>{
+        for(let i =0; i<addInfo.length;i++){
+            addInfo[i].style = "display:none";
+        }
+    })
     // Карточка продукту буде мати різний вигляд в залежності від стану авторизації
     // Верхня частина буде однаковою, футер - буде відрізнятися
     const commonProductCardPart = `<div class="product-data">
