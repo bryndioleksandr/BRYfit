@@ -8,7 +8,7 @@
   
   .progress-bar {
     height: 5px;
-    background: #02301f;
+    background: #f9a921;
     width: 0%;
   }
 
@@ -113,7 +113,7 @@
 }
 
 .site-name-item:hover{
-    background-color: #02301F;
+    background-color: #f9a921;
 
 }
 
