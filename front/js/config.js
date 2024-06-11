@@ -6,7 +6,7 @@ import { renderProductCategoriesOptions } from "./modals/productModal.js";
 // const backURL = `https://cups-store.onrender.com`;
 // Змінити backURL на `http://localhost:4000` при запуску на локальному сервері;
 //export const backURL = `http://localhost:5501`;
- export const backURL = `https://bry-fit.onrender.com`;
+ export const backURL = `https://bryfit.onrender.com`;
 
 // Робота з localStorage
 
