@@ -1,10 +1,16 @@
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 import connectToDB from "./models/DB_connection.js";
 import router from "./routes/router.js";
 
 dotenv.config();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
@@ -16,6 +22,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
   }));
+  app.use(express.static(path.join(__dirname, '../front')));
 
 // Підключення роутера
 app.use(router);

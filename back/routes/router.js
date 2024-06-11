@@ -13,4 +13,9 @@ router.use('/category', categoryRouter);
 router.use('/order', orderRouter);
 router.use('/review', reviewRouter);
 
+router.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../front', 'index.html'));
+});
+router.use('/', productRouter);
+
 export default router;
