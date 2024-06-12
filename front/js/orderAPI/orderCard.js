@@ -110,7 +110,7 @@ export const  orderCardRender = (order) => {
         return accumulator + item.count * item.product.price;
     }, 0);
     totalCartPrice.innerHTML = `<div class="cart-order-price-label"> Order price:</div>
-                                <div class="cart-order-price-text"> ${orderPrice} &#x20b4</div>`
+                                <div class="cart-order-price-text"> ${orderPrice} $</div>`
     cartContainer.appendChild(totalCartPrice);
   
 }
@@ -129,11 +129,11 @@ function orderCartItemRender(item, order) {
                             <div class="cart-product-info order-details">
                                 <div class="cart-product-name">${item.product.name}</div>
                                 <div class="cart-product-material">${item.product.producer}</div>
-                                <div class="cart-product-volume">${item.product.sizes} mm</div>
-                                <div class="cart-product-price">${item.product.price} &#x20b4 / pc</div>
+                                <div class="cart-product-volume">${item.product.sizes}</div>
+                                <div class="cart-product-price">${item.product.price} $ / pc</div>
                             </div>
 
-                            <div class="cart-item-price">${item.count*item.product.price} &#x20b4
+                            <div class="cart-item-price">${item.count*item.product.price} $
                             </div>`;
     cartContainer.appendChild(cartItem);
 }

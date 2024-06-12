@@ -25,7 +25,8 @@ section {
     perspective: 1200px;
 }
 
-.product-data, .card-back {
+.product-data,
+.card-back {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -52,11 +53,11 @@ section {
     content: '';
     position: absolute;
     border: 5px solid rgba(255, 255, 255, .5);
-    box-shadow: 0 0 12px rgba(0, 0, 0, .1);
-    top: 20px;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .3);
+    top: 26px;
+    left: 26px;
+    right: 26px;
+    bottom: 26px;
     z-index: 2;
     transition: ease all 2.3s;
     transform-style: preserve-3d;
@@ -81,6 +82,34 @@ section {
     padding: 20px;
     text-align: center;
     transform: rotateY(180deg);
+    border: none;
+}
+
+.card-back div {
+    padding: 15px 0;
+    font-size: 20px;
+    border-bottom: 2px solid white;
+}
+
+.product-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    caret-color: transparent;
+}
+
+.product-footer,
+.product-footer div {
+    border-bottom: 0px solid white;
+}
+
+.card-back div {
+    font-weight: bold;
+}
+
+.card-back div span {
+    font-weight: lighter;
 }
 
 .product:hover .product-data {
@@ -99,13 +128,13 @@ section {
 
 .product-category {
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 3px;
+    border-radius: 2px;
     font-size: 1.1rem;
     color: white;
     width: 60%;
     position: absolute;
-    top: 10px;
-    left: -10px;
+    top: 0px;
+    left: 4px;
     transform: skewX(-20deg);
 }
 
@@ -117,11 +146,11 @@ section {
 .product-name {
     font-weight: 600;
     position: absolute;
-    bottom: 55px;
-    left: 50px;
+    bottom: 30px;
+    left: 40px;
     color: white;
     z-index: 3;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .product-text {
@@ -129,7 +158,7 @@ section {
 }
 
 .product-price {
-    font-weight: 200;
+    font-weight: 500;
     position: absolute;
     top: 55px;
     right: 50px;
@@ -138,16 +167,13 @@ section {
     font-size: 2em;
 }
 
-.product-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    caret-color: transparent;
-}
+
 
 .product-manage-btns {
     display: flex;
+    width:100%;
+    padding: 10px;
+    justify-content: center;
 }
 
 .product-btn {
@@ -155,10 +181,20 @@ section {
     font-weight: 100;
     padding: 0 10px;
     cursor: pointer;
+    margin: 15px;
+    transition-duration: 0.3s;
 }
+
+
 
 .product-cart-btn {
     font-size: 1.5rem;
     padding: 0 20px;
     cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.product-btn:hover, .product-cart-btn:hover {
+    scale: 1.2;
+    color: #F9A921;
 }

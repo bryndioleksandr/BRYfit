@@ -63,7 +63,7 @@ export const cartRender =  () => {
                 return accumulator + item.count * item.product.price;
             }, 0);
             totalCartPrice.innerHTML = `<div class="cart-order-price-label"> Order price:</div>
-                                        <div class="cart-order-price-text"> ${orderPrice} &#x20b4</div>`
+                                        <div class="cart-order-price-text"> ${orderPrice} $</div>`
             cartContainer.appendChild(totalCartPrice);
 
             // Кнопка оформлення замовлення

@@ -47,7 +47,7 @@ const productModalContent = `<form name="productForm" enctype="multipart/form-da
             <td class="form-input"><input type="file" name="productImage" id="productImage" class="form-control" onchange="document.getElementById('formImage').src = window.URL.createObjectURL(this.files[0])" ></td>
         </tr>
         <tr>
-            <td class="form-label"><label for="productPrice">Price, &#x20b4:</label> </td>
+            <td class="form-label"><label for="productPrice">Price, $:</label> </td>
             <td class="form-input"><input type="number" name="productPrice" id="productPrice" class="form-control" required></td>
         </tr>
     </table>

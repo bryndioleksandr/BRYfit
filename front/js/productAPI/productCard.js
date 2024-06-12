@@ -12,12 +12,12 @@ export const productCardRender = (product) => {
         <div class="product-data" style="background-image: url('${product.image}')">
             <div class="product-category"><div class="product-category-text">${category.name}</div></div>
             <div class="product-name">${product.name}</div>
-            <div><span class="product-price">${product.price} &#x20b4</span></div>
+            <div><span class="product-price">${product.price} $</span></div>
         </div>
         <div class="card-back">
             <div class="product-text">Color: <span class="product-color">${product.color}</span></div>
             <div class="product-text">Producer: <span class="product-material">${product.producer}</span></div>
-            <div class="product-text">Sizes: <span class="product-volume">${product.sizes}</span> mm</div>
+            <div class="product-text">Sizes: <span class="product-volume">${product.sizes}</span></div>
             <div class="product-footer">
                 ${getUser() ? `
                     ${getUser().isAdmin ? `

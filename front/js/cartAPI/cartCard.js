@@ -20,15 +20,15 @@ export const cartCardRender = (item, index) => {
                             <div class="cart-product-info">
                                 <div class="cart-product-name">${item.product.name}</div>
                                 <div class="cart-product-material">${item.product.producer}</div>
-                                <div class="cart-product-volume">${item.product.sizes} mm</div>
-                                <div class="cart-product-price">${item.product.price} &#x20b4 / pc</div>
+                                <div class="cart-product-volume">${item.product.sizes}</div>
+                                <div class="cart-product-price">${item.product.price} $ / pc</div>
                             </div>
                             <div class="cart-manage-btns">
                                 <button class="cart-manage-button" id="decreaseCartItemCount${item.product._id}">-</button>
                                 <div class="cart-current-item-count">${item.count}</div>
                                 <button class="cart-manage-button" id="increaseCartItemCount${item.product._id}">+</button>
                             </div>
-                            <div class="cart-item-price">${item.count*item.product.price} &#x20b4
+                            <div class="cart-item-price">${item.count*item.product.price} $
                             </div>`;
     cartContainer.appendChild(cartCard);
     // Навішуємо обробники
